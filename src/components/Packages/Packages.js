@@ -18,7 +18,7 @@ const Packages = () => {
     return (
         <div>
              <Container className="">
-                <h4 className="text-center pt-5 pb-5 fw-bold">Our Services</h4>
+                <h4 className="text-center pt-5 pb-5 fw-bold">Our Packages</h4>
             <Row xs={1} md={3} className="g-4 caed-container">   
             {
             packages.map(pack=> <Package
