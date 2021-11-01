@@ -27,6 +27,7 @@ user.email?
 
   <button className="btn btn-outline-success" onClick={logOut}>LogOut</button>
 </div> : <div className="d-flex">
+<Nav.Link   as= {Link} to="/addNewPackages">Add New Service</Nav.Link>
   <Nav.Link as= {Link} to ="/login"><Button className="btn btn-outline-success" variant="outline-success">LogIn</Button></Nav.Link>
 </div>
 

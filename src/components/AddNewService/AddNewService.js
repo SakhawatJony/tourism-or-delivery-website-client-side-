@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import './AddNewService'
+import './AddNewService.css'
 import { useForm } from 'react-hook-form';
 
 const AddNewService = () => {
@@ -9,7 +9,7 @@ const AddNewService = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/packages', data)
+        axios.post('https://ghoulish-werewolf-82380.herokuapp.com/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('packages added successfully');
@@ -19,7 +19,7 @@ const AddNewService = () => {
     }
     return (
         <div className="add-packages">
-            <h2>Please Add a packages</h2>
+            <h2 className="text-center">Please Add a packages</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                 <textarea {...register("description")} placeholder="Description" />
