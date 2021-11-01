@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Package from '../Package/Package';
+import Bounce from 'react-reveal/Bounce';
 
 
 const Packages = () => {
@@ -18,7 +19,10 @@ const Packages = () => {
     return (
         <div>
              <Container className="">
-                <h4 className="text-center pt-5 pb-5 fw-bold">Our Packages</h4>
+             <Bounce>
+             <h4 className="text-center pt-5 pb-5 fw-bold">Our Packages</h4>
+        </Bounce>
+               
             <Row xs={1} md={3} className="g-4 caed-container">   
             {
             packages.map(pack=> <Package
